@@ -1,0 +1,16 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Fazendo Request de uma API que informa o status real de tempo e previsão para construir um Weather app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.3.9"
+  }
+}
