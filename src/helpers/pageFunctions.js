@@ -101,7 +101,7 @@ function createCityElement(cityInfo) {
 }
 
 export const getForecast = async (cityURL) => {
-  const api = await fetch(`http://api.weatherapi.com/v1/forecast.json?lang=pt&key=${TOKEN}&q=${cityURL}&days=7`);
+  const api = await fetch(`https://api.weatherapi.com/v1/forecast.json?lang=pt&key=${TOKEN}&q=${cityURL}&days=7`);
   const data = await api.json();
   const forecastList = data.forecast.forecastday
     .map((day) => {

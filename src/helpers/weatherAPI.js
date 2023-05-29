@@ -1,7 +1,7 @@
 const TOKEN = import.meta.env.VITE_TOKEN;
 
 export const searchCities = async (term) => {
-  const api = await fetch(`http://api.weatherapi.com/v1/search.json?lang=pt&key=${TOKEN}&q=${term}`);
+  const api = await fetch(`https://api.weatherapi.com/v1/search.json?lang=pt&key=${TOKEN}&q=${term}`);
   const data = await api.json();
   if (data.error) window.alert('Insira uma Cidade!');
   if (data.length === 0) window.alert('Nenhuma cidade encontrada');
@@ -9,7 +9,7 @@ export const searchCities = async (term) => {
 };
 
 export const getWeatherByCity = async (cityURL) => {
-  const api = await fetch(`http://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${cityURL}`);
+  const api = await fetch(`https://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${cityURL}`);
   const data = await api.json();
   const { current, location } = await data;
   const { condition } = current;
